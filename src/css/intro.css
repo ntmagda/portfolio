@@ -1,0 +1,106 @@
+
+
+
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+#main-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+   
+  }
+
+#intro-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#intro{
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.6);
+    height: 50vh;
+    width: 40vw;    
+    text-align: center;
+
+}
+
+
+#intro-text-wrapper{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+#intro-text{
+    margin: auto;
+    text-align: center;
+    font-family: 'Tangerine', serif;
+    font-size: 20px;
+    /* font-weight: bold; */
+    /* width: 100%;  */
+    /* height: 100%;  */
+    top:0;
+    /* background-color: blueviolet;  */
+ }
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%; 
+ }
+
+nav ul {
+    position: absolute;
+    display: flex;
+    list-style-type: none;
+    text-decoration: none;
+    margin: auto;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+
+}
+
+li {
+    height: 100%; 
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    font-family: 'Tangerine', serif;
+    font-size: 2em;
+    color: black;
+}
+
+.climb_code_intro {
+    height: 100vh;
+    width: 50vw;
+}  
+
+#code_intro {
+    background-color: purple;
+}
+
+#climb_intro {
+    background-image:url('../img/climb.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
