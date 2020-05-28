@@ -18,13 +18,7 @@ class Intro extends Component{
                     <div id="intro-text-wrapper">
                         <div id="intro-text">Hello My name is magda and I</div>
                     </div>
-                    <nav>
-                        <ul>
-                            <Button item ="Code" tolink="/code">Code</Button>
-                            <Button  item ="Climb" tolink="/climb">Climb</Button>
-                        </ul>
-                    </nav>
-                </div>    
+                </div>
             </div>
         )
 }

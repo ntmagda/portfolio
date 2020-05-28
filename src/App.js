@@ -11,8 +11,18 @@ class App extends Component {
     <Router>
       <Intro></Intro>
       <div id='main-wrapper'>
-          <div className = "climb_code_intro" id='climb_intro'></div>
-          <div className ="climb_code_intro" id='code_intro'></div>
+          <figure className = "climb_code_intro" id='climb_intro'>
+            <figcaption>
+              <h2>CLIMB</h2>
+              <p>Travel the world and climb</p>
+            </figcaption>
+          </figure>
+          <figure className ="climb_code_intro" id='code_intro'>
+            <figcaption>
+              <h2>CODE</h2>
+              <p>Code and earn money for it</p>
+            </figcaption>
+          </figure>
       </div>
     </Router>
     )
