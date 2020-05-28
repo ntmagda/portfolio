@@ -16,7 +16,8 @@ class Intro extends Component{
             <div id="intro-wrapper">
                 <div id="intro">
                     <div id="intro-text-wrapper">
-                        <div id="intro-text">Hello My name is magda and I</div>
+                        <h1>Hello My name is magda</h1>
+                        <p>- and I -</p>
                     </div>
                 </div>
             </div>
