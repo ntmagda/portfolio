@@ -1,5 +1,21 @@
 #climb-content {
     width: 100%;
     height: 100vh;
-    background-color: #AECCE5;
+    color: black;
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/climb11.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-climbing {
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 5vh;
+    filter: brightness(100%);
 }

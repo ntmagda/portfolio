@@ -3,24 +3,13 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
-    background-color: #AECCE5;
-    /* overflow: hidden; */
+    background-color: #a8dadc;
     overflow-x: hidden;
   }
 
-#main-wrapper {
-    height: 100vh;
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
 #intro-wrapper {
-    position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     height: 100vh;
     width: 100%;
 }
@@ -28,17 +17,21 @@ body {
 #intro{
     position: absolute;
     color:white;
-    width: 100vw;    
+    width: 100vw;
+    height: 30vh;
     text-align: center;
-    background-color: #70ABEC;
+    background-color: #457b9d;
 }
 
+
 #intro-text-wrapper{
-    height: 70%;
+    position: relative;
     width: 100%;
+    height: 15vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 3vh;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -46,33 +39,49 @@ body {
     margin: auto;
     text-decoration: none;
     text-align: center;
-    text-transform: uppercase;
-    font-size: 1.88em; 
+    /* text-transform: uppercase; */
     top:0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid greenyellow;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    border-bottom: 1px solid #b2ff9e;
  }
 
  #intro-text-wrapper p {
      margin:0;
+     font-size: 6,5em;
  }
 
  .social {
-    margin-top: 5vh;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
 
  }
 
- .social i  {
-    padding-right: 30px;
- }
 
 .social-item {
-    color: #225A97;
+    font-size: 3vh;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #3c1642;
 }
 
  .social-item:hover {
-    color:lime;
+    color:#3c1642;
  }
  
+ #intro-main {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30vh;
+    height: 70vh;
+    width: 70%;
+}
+
+#main-wrapper{
+    display: flex;
+    flex-direction: column;
+
+}

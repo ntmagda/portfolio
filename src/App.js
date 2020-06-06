@@ -8,7 +8,6 @@ import './css/code-content.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Intro from './Components/Intro';
 import Code_Timeline from './Content/code'
-// import Intro_Figure from './Components/Intro_Figure';
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLaptopCode, faMountain } from '@fortawesome/free-solid-svg-icons'
@@ -29,10 +28,8 @@ class App extends Component {
       document.getElementById("climb-content").style.display = "block"
     }
     if (id === 'code_button') {
-      const code_content = document.getElementById("code-content")
       document.getElementById("climb-content").style.display = "none"
-      code_content.style.display = "block"
-      // scroll.scrollTo("code_content")
+      document.getElementById("code-content").style.display = "block"
     }
     
 }
@@ -40,8 +37,10 @@ class App extends Component {
   render() { 
     return (
     <Router>
+      <div id='main-wrapper'>
+      <div id='intro-wrapper'>
       <Intro></Intro>
-      <section id='main-wrapper'>
+      <section id='intro-main'>
          <figure className = "intro_figure" id='climb_intro'>
           <Link to="climb-content" spy={true} smooth={true} duration={800}>
               <a className= "intro_figure_button" id ='climb_button' onClick={this.handleClick}>
@@ -58,21 +57,24 @@ class App extends Component {
               <a className= "intro_figure_button" id ='code_button' onClick={this.handleClick}>
               <FontAwesomeIcon icon={faLaptopCode} size="8x" className="icon"/>
                   <figcaption>
-                      <h2>Code</h2>
+                      <h2>CODE</h2>
                       <p>Code and earn money for it</p>
                   </figcaption>
               </a>
           </Link>
-        </figure>
-      
-      
-      
-      </section>
-      <div className = "main-content" id="climb-content">
+        </figure>  
+        </section>
       </div>
-      <div className = "main-content" id="code-content">
-      <Code_Timeline></Code_Timeline>
-      </div>
+        <div className = "main-content" id="climb-content">
+          <section id = 'about-climbing'>
+              The last two years I spent travelling and climbing around the world. 
+              It was an unforgetable expirience. 
+          </section>
+        </div>
+        <div className = "main-content" id="code-content">
+        <Code_Timeline></Code_Timeline>
+        </div>
+        </div>
     </Router>
     )
   }

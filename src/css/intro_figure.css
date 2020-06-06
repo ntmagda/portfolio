@@ -1,45 +1,59 @@
 #climb_button,
 #code_button{
-    display: block;
     height: 100%;
     width: 100%;
+    display: flex;   
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
 }
 
+#climb_button > svg,
+#code_button > svg {
+    padding-bottom: 15%;
+    height: 20vh;
+    color:#1d3557;
+    transition: opacity 0.5s;
+    opacity: 0.8;
+}
+
+
 #code_intro,
-#clmb_intro {
-    color:black;
+#climb_intro {
+    color:3c1642;
+    font-size: 70%;
+    width: 100%;
+    margin: 0;
 }
 
 #code_intro p,
 #climb_intro p {
-    color: rgba(0, 0, 0, 0.7);
+    color: 3c1642;
 }
-
 
 
 figure {
     position: relative;
-    margin-top: 20vh;
-    height: 45%;
-    width: 35%;
-    margin-right: 3vw;
-    margin-left: 3vw;
+    height: 80%;
+    width: 100%;
     overflow: hidden;
     opacity: 1;
     transition: opacity 0.35s, transform 0.35s;
     text-align: center;
+
+
 }  
 
 
 figure figcaption {
     position: absolute;
-	/* padding: 1em; */
-    /* color: darkblue; */
     top: auto; 
-    text-transform: uppercase;
-    font-size: 1.25em;
-    bottom: 1em;
+    /* text-transform: uppercase; */
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    bottom: 2em;
+    padding-bottom: 7%;
     height: 30%;
     width: 100%;
     text-align: center;
@@ -57,12 +71,12 @@ figure p {
 
 figure p {
 	letter-spacing: 1px;
-	font-size: 68.5%;
+	font-size: 80%;
 }
 
 figure h2,
 figure p {
-	transform: translate3d(0,40px,0);
+	transform: translate3d(0,10vh,0);
 }
 
 figure h2 {
@@ -73,13 +87,19 @@ figure p {
 	transition: opacity 0.2s, transform 0.35s;
 }
 
+figure:hover #climb_button > svg{
+    opacity:1;
+}
+figure:hover #code_button > svg{
+    opacity:1;
+}
 
 
-figure:hover,
+
 figure:hover h2,
 figure:hover p {
     opacity: 1;
-    transform: translate3d(0,0,0);
+    transform: translate3d(0,5vh,0);
 
 }
 
