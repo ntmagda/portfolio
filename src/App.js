@@ -1,17 +1,41 @@
 
 import React, {Component} from 'react';
 import './css/intro.css';
+
 import './css/intro_figure.css';
 import './css/climb-content.css';
 import './css/code-content.css';
+import './css/navbar.css';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Intro from './Components/Intro';
-import Code_Timeline from './Content/code'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLaptopCode, faMountain } from '@fortawesome/free-solid-svg-icons'
+import { Link} from 'react-scroll'
 
+
+import Home from './Content/home'
+import Climb from './Content/climb'
+import Code from './Content/code'
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("intro").style.opacity = 0;
+    document.getElementById("nav-wrapper").style.opacity = 1;
+    document.getElementById("intro-main").style.opacity = 0;
+  } else {
+    document.getElementById("intro").style.opacity = 1;
+    document.getElementById("nav-wrapper").style.opacity = 0;
+    document.getElementById("intro-main").style.opacity = 1;
+
+  }
+  if (document.body.scrollTop > window.innerHeight*0.8 || document.documentElement.scrollTop > window.innerHeight*0.8){
+    document.getElementById("nav-wrapper").style.backgroundColor = "black";
+  }
+  else {
+    document.getElementById("nav-wrapper").style.backgroundColor = "";
+
+  }
+}
 
 
 class App extends Component {
@@ -25,56 +49,23 @@ class App extends Component {
     const id = event.currentTarget.id;
     if(id === 'climb_button'){
       document.getElementById("code-content").style.display = "none"
-      document.getElementById("climb-content").style.display = "block"
+      document.getElementById("climb-content").style.display = "flex"
     }
     if (id === 'code_button') {
       document.getElementById("climb-content").style.display = "none"
-      document.getElementById("code-content").style.display = "block"
+      document.getElementById("code-content").style.display = "flex"
     }
-    
 }
 
   render() { 
     return (
-    <Router>
+    <Router> 
+
       <div id='main-wrapper'>
-      <div id='intro-wrapper'>
-      <Intro></Intro>
-      <section id='intro-main'>
-         <figure className = "intro_figure" id='climb_intro'>
-          <Link to="climb-content" spy={true} smooth={true} duration={800}>
-              <a className= "intro_figure_button" id ='climb_button' onClick={this.handleClick}>
-              <FontAwesomeIcon icon={faMountain} size="8x" className="icon"/>
-                  <figcaption>
-                      <h2>CLIMB</h2>
-                      <p>Climb and travel the world</p>
-                  </figcaption>
-              </a>
-          </Link>
-        </figure>
-        <figure className = "intro_figure" id='code_intro'>
-          <Link to="code-content" spy={true} smooth={true} duration={800}>
-              <a className= "intro_figure_button" id ='code_button' onClick={this.handleClick}>
-              <FontAwesomeIcon icon={faLaptopCode} size="8x" className="icon"/>
-                  <figcaption>
-                      <h2>CODE</h2>
-                      <p>Code and earn money for it</p>
-                  </figcaption>
-              </a>
-          </Link>
-        </figure>  
-        </section>
+        <Home></Home>
+        <Climb></Climb>>
+        <Code></Code>
       </div>
-        <div className = "main-content" id="climb-content">
-          <section id = 'about-climbing'>
-              The last two years I spent travelling and climbing around the world. 
-              It was an unforgetable expirience. 
-          </section>
-        </div>
-        <div className = "main-content" id="code-content">
-        <Code_Timeline></Code_Timeline>
-        </div>
-        </div>
     </Router>
     )
   }

@@ -3,10 +3,11 @@ import React, {Component} from 'react';
 
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react';
 
-class Code_Timeline extends Component{
+class Code extends Component{
 
     render(){
         return (
+        <div className = "main-content" id="code-content">
         <Timeline lineColor={'#ddd'}>
         <TimelineItem
             key="001"
@@ -37,11 +38,11 @@ class Code_Timeline extends Component{
             est.
             </p>
         </TimelineItem>
-        
         </Timeline>
+        </div>
            )
         }
 }
 
 
-export default Code_Timeline;
+export default Code;

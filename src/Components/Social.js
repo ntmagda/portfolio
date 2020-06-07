@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import '../css/social.css';
+
+
 class Social extends Component {
     render() {
         return (

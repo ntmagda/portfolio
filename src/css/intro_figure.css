@@ -1,5 +1,4 @@
-#climb_button,
-#code_button{
+.intro_figure_button{
     height: 100%;
     width: 100%;
     display: flex;   
@@ -9,27 +8,25 @@
 
 }
 
-#climb_button > svg,
-#code_button > svg {
+.intro_figure_button > svg {
     padding-bottom: 15%;
     height: 20vh;
-    color:#1d3557;
+    /* color:#1d3557; */
+    color:whitesmoke;
     transition: opacity 0.5s;
     opacity: 0.8;
 }
 
 
-#code_intro,
-#climb_intro {
-    color:3c1642;
+.intro_figure {
+    color:whitesmoke;
     font-size: 70%;
     width: 100%;
     margin: 0;
 }
 
-#code_intro p,
-#climb_intro p {
-    color: 3c1642;
+.intro_figure p {
+    color: whitesmoke;
 }
 
 
@@ -87,10 +84,7 @@ figure p {
 	transition: opacity 0.2s, transform 0.35s;
 }
 
-figure:hover #climb_button > svg{
-    opacity:1;
-}
-figure:hover #code_button > svg{
+figure:hover .intro_figure_button > svg{
     opacity:1;
 }
 

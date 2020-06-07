@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Social from './Social';
 
 
+
 class Intro extends Component{
     render(){
         return (

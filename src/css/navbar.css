@@ -1,0 +1,45 @@
+/* <div id="nav">
+<Social></Social>
+<div id="nav-wrapper">
+    <li>Home</li>
+    <li>Climb</li>
+    <li>Code</li>
+</div>
+</div> */
+
+
+#nav-wrapper{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+    color: white;
+}
+
+.nav-link {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
